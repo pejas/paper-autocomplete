@@ -1,12 +1,12 @@
 {
   "name": "paper-autocomplete",
   "description": "Material Design autocomplete component.",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "author": "S. Francis",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/ellipticaljs/paper-autocomplete.git"
+    "url": "https://github.com/pejas/paper-autocomplete.git"
   },
   "devDependencies": {
     "gulp": "^3.8.7",

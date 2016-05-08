@@ -208,7 +208,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     _clear : function() {
       this.value=this._value;
       this.$.input.value='';
-      this.$.clear.style.display = 'none';
+      this.$.clear.style.visibility = 'hidden';
       this._hideSuggestionsWrapper();
       this._emptyItems();
       var option = {
@@ -244,7 +244,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       if (value && value.length >= minLength) {
         this._fireEvent(option, 'change');
       } else {
-        this.$.clear.style.display = 'none';
+        this.$.clear.style.visibility = 'hidden';
         this._suggestions = [];
       }
     },
@@ -254,10 +254,10 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         this._suggestions = arr;
         this._currentIndex = -1;
         this._scrollIndex = 0;
-        this.$.clear.style.display = 'block';
+        this.$.clear.style.visibility = 'hidden';
         this.$.suggestionsWrapper.style.display = 'block';
       } else {
-        this.$.clear.style.display = 'none';
+        this.$.clear.style.visibility = 'hidden';
         this._suggestions = [];
       }
     },
@@ -272,7 +272,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         value = value.toLowerCase();
 
         // Shows the clear button.
-        this.$.clear.style.display = 'block';
+        this.$.clear.style.visibility = 'visible';
 
         // Search for the word in the source properties.
         if(this.source && this.source.length > 0){
@@ -299,7 +299,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           }
         }
       }else{
-        this.$.clear.style.display = 'none';
+        this.$.clear.style.visibility = 'hidden';
         this._suggestions = [];
       }
     },
@@ -314,7 +314,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       this.label=this.$.input.value;
 
       if(!this.showClear){
-        this.$.clear.style.display = 'none';
+        this.$.clear.style.visibility = 'hidden';
       }
       this._emptyItems();
       this._fireEvent(selectedOption,'selected');
